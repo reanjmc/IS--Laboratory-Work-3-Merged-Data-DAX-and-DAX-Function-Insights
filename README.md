@@ -46,15 +46,47 @@ Yes, sales were correctly grouped and summed for each customer.
 The data would not connect properly and calculations would produce incorrect results.
 
 
+# PART 6 — Introduction to DAX and Guide Questions
+
+## Guide Questions
+### 1. What is a DAX measure?
+A DAX measure is a calculation used to analyze data in Power BI reports.
+
+### 2. Difference between SUM and AVERAGE?
+SUM adds all values together, while AVERAGE calculates the mean value.
+
+### 3. Why use measures instead of calculated columns?
+Measures calculate results dynamically based on the report filters.
 
 
+# PART 7 — DAX Time Intelligence and Guide Questions
+## List of DAX formulas
+### 1. Total Sales
+Total Sales = SUM(FactSales[SalesAmount])
+### 2. Total Quantity
+Total Quantity = SUM(FactSales[Quantity])
+### 3. Average Sales
+Average Sales = AVERAGE(FactSales[SalesAmount])
 
+## Guide Questions
+### 1. What is time intelligence in DAX?
+Time intelligence allows analysis of data across time periods such as months or years.
+### 2. Why is a date table required?
+A date table is required for time-based calculations and proper time analysis.
+### 3. How does PREVIOUSMONTH help analyze trends?
+It compares the current month's performance with the previous month.
+### 4. What insights can YTD Sales provide?
+It shows the total sales accumulated from the beginning of the year until the current date.
 
-
-
-
-
-
-
+# This is a Star Schema.
+DimCustomer (1)
+      |
+      | CustomerID
+      |
+FactSales
+      |
+      | OrderDate
+      |
+DimDate
 
 
